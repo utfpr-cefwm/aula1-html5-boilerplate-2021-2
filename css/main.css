@@ -1,0 +1,137 @@
+/*
+seletor {
+  atributo: valor;
+}
+*/
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: larger;
+}
+
+h1 {
+  font-weight: normal;
+  margin: 1em 0 0 1px;
+  padding: .5em 0 .5em 3px;
+}
+
+.fundo-roxo {
+  background-color: #efe9f3;
+}
+
+.borda-roxa-esq {
+  border-left: .5em solid purple;
+}
+
+h2 {
+  margin: 2em 0 0;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 2em;
+}
+
+section {
+  color: #0c2a44;
+}
+
+p {
+  line-height: 1.5;
+}
+
+p:first-of-type::first-letter {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 4em;
+  font-weight: bold;
+  line-height: 1em;
+}
+
+.citacao {
+  margin: 1em 2em 1em 4em;
+  line-height: 2;
+  font-style: italic;
+  text-align: justify;
+  font-size: 0.9em;
+  text-transform: uppercase;
+}
+.citacao::before,
+.citacao::after {
+  font-size: 3em;
+  line-height: 1em;
+}
+.citacao::before {
+  content: "“";
+  vertical-align: text-bottom;
+}
+.citacao::after {
+  content: "”";
+  vertical-align: text-top;
+}
+
+#titulo-principal {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.misterio {
+  text-transform: lowercase;
+  text-shadow: 0.1em 0.1em 0.1em rgba(0, 0, 0, 0.35)!important;
+}
+.misterio.verde {
+  color: #538606;
+}
+.misterio:hover {
+  color: #552828;
+}
+
+[id="titulo-principal"] {
+  text-shadow: 0.1em 0.1em 0.1em #8000806e;
+  font-weight: normal;
+}
+
+span {
+  background-color: #f3e9f0;
+  padding: 0.5em;
+  margin: 0.5em;
+  border: 2px solid salmon;
+  /* width: 20em; */
+}
+div {
+  background-color: #eef3e9;
+  padding: 0.5em;
+  margin: 0.5em;
+  border: 2px dotted salmon;
+  /* width: 20em; */
+}
+.bloco-em-linha {
+  display: inline-block;
+}
+
+.container-flex {
+  background-color: blanchedalmond;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.container-flex aside {
+  flex-basis: 20em;
+  flex-grow: 1;
+}
+
+.container-flex main {
+  flex-basis: 30em;
+  flex-grow: 10;
+}
+
+@media screen and (max-width: 800px) {
+  .container-flex {
+    display: block;
+  }
+}
+
+@media print {
+  .container-flex {
+    display: block;
+  }
+  aside {
+    display: none;
+  }
+}
